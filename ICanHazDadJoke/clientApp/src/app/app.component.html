@@ -1,0 +1,13 @@
+<form>
+  <input
+    [formControl]="term"
+    type="text"
+    placeholder="Search Jokes"
+  >
+  <button type="button" (click)="fetchRandomJoke()">Fetch Random Joke</button>
+</form>
+<div *ngFor="let joke of jokes; let i = index">
+  <p>
+    <b>{{i+1}}.</b>&nbsp;{{joke.joke}}
+  </p>
+</div>
